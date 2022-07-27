@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let limitNumber = +prompt("Nhập vào giới hạn:")
+
+  function sumPrime(limitNum){
+    let sum =0;
+    for (let number =2; number<limitNum; number++) {
+      let count = 0;
+      for ( let i = 1; i <= number; i++) {
+        if(number % i == 0) {
+          count++;
+        }
+      }
+
+      if (count == 2 ) {
+        sum += number;
+      }
+    }
+    return sum;
+  }
+  alert("Tổng các số nguyên tố nhỏ hơn " + limitNumber + " là: " + sumPrime(limitNumber))
+</script>
+</body>
+</html>
